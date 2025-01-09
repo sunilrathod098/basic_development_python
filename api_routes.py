@@ -1,6 +1,7 @@
 from flask import request, jsonify
 from models import db, User
 
+
 def create_user():
     data = request.get_json()
     new_user = User(username=data['username'], email=data['email'], password=data['password'])
